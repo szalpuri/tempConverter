@@ -7,14 +7,14 @@
     *{
         text-align: center;
         font-size: 28px;
-        padding:20px;
+        padding:15px;
     }
     button{
         margin-top:20px;
-        margin-left:20px;
+       
     }
     body{
-        margin-top:100px;
+        margin-top:10px;
         background-image: url("abstract.jpg");
         background-size: cover;
     }
@@ -29,7 +29,7 @@
         <input type="number" id="t">
         <br>
         <br>
-        <button type="button" onclick="myFunction1()">Convert to C</button>
+        <button type="button" onclick="myFunction1()">Convert to C</button><br>
         <button type="button" onclick="myFunction2()">Convert to F</button>
 
         <span id="answer" style="font-weight:25px;font-weight:bold;"></span>
@@ -44,7 +44,7 @@
                     document.getElementById("answer").innerHTML = "Temperature in Celsius is 0";
                 }
                 else {
-                    var temp = (5 / 9) / (temp - 32);
+                    var temp = (5 / 9) / (t - 32);
 
                     document.getElementById("answer").innerHTML = "Temperature in Celsius is" + temp;
                 }
