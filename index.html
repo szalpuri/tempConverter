@@ -1,0 +1,61 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    *{
+        text-align: center;
+        font-size: 28px;
+        padding:20px;
+    }
+    button{
+        margin-top:20px;
+        margin-left:20px;
+    }
+    body{
+        margin-top:100px;
+        background-image: url("abstract.jpg");
+        background-size: cover;
+    }
+        </style>
+</head>
+
+<body>
+    <h1 style="color:white;">Temperature Converter</h1>
+    <h1> Please Enter temperature and press button to calculate!</h2>
+
+        <b>Temperature: </b> &nbsp; &nbsp;
+        <input type="number" id="t">
+        <br>
+        <br>
+        <button type="button" onclick="myFunction1()">Convert to C</button>
+        <button type="button" onclick="myFunction2()">Convert to F</button>
+
+        <span id="answer" style="font-weight:25px;font-weight:bold;"></span>
+        <script src="cordova.js"></script>
+        <script>
+
+            
+            function myFunction1() {
+
+                const t = document.getElementById("t").value;
+                if (t == 32) {
+                    document.getElementById("answer").innerHTML = "Temperature in Celsius is 0";
+                }
+                else {
+                    var temp = (5 / 9) / (temp - 32);
+
+                    document.getElementById("answer").innerHTML = "Temperature in Celsius is" + temp;
+                }
+            }
+
+            function myFunction2() {
+                const t = document.getElementById("t").value;
+                var temp = (9 / 5) * t + 32;
+                document.getElementById("answer").innerHTML = "Temperature in Farhenheit is" + temp;
+            }
+        </script>
+</body>
+
+</html>
